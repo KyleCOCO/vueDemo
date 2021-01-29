@@ -56,7 +56,5 @@ export default {
     vertical-align: middle;
     margin-bottom: 2px;
   }
-  .slect {
-    color: #f00;
-  }
+
 </style>

@@ -4,11 +4,14 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 
-import {request, instance2} from './network/request'
+import {request} from './network/request'
 
-
+Vue.prototype.$request = request;
 
 Vue.config.productionTip = false
+
+axios.defaults.baseURL = '/chnphoto_mobile_app'
+axios.defaults.headers['Content-Type'] = 'application/json'
 
 /* eslint-disable no-new */
 new Vue({
@@ -18,4 +21,14 @@ new Vue({
   render: h => h(App)
 })
 
+
+axios({
+  url: '/circle/Circle/lastestNews',
+  method: 'POST',
+  data: {page: 1, userId: 3454}
+}).then(res => {
+  console.log(res);
+}).catch(err => {
+  console.log(err);
+})
 

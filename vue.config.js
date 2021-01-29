@@ -9,5 +9,14 @@ module.exports = {
       https: false,   //是否使用https协议
       hotOnly: false, //是否开启热更新
       proxy: null,
+  },
+  proxy: {
+    '/chnphoto_mobile_app': {
+        target: 'http://nm.chnphoto.cn/chnphoto_mobile_app', //API服务器的地址
+        changeOrigin: true,
+        pathRewrite: {
+            '^/chnphoto_mobile_app': ''
+        }
+    }
   }
 }

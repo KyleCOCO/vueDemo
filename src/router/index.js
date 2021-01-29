@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-const Home = () => import('../pages/Home/home')
-const Category = () => import('../pages/Category/category')
-const Cart = () => import('../pages/Cart/cart')
-const Profile = () => import('../pages/Profile/profile')
+const Home = () => import('@/pages/Home/home')
+const Category = () => import('@/pages/Category/category')
+const Cart = () => import('@/pages/Cart/cart')
+const Profile = () => import('@/pages/Profile/profile')
 
 Vue.use(VueRouter)
 
@@ -32,7 +32,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history'
+  // mode: 'history'
 })
 
 export default router

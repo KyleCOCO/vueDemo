@@ -1,28 +1,28 @@
 <template>
   <div>
     <tab-bar>
-      <tab-bar-item path="/home" selecColor="red">
+      <tab-bar-item path="/home" selecColor="var(--color-tint)">
         <i slot="item-icon" class="iconfont icon-zhuye"></i>
         <i slot="item-icon-select" class="iconfont icon-zhuye-select"></i>
         <div slot="item-text">
           首页
         </div>
       </tab-bar-item>
-      <tab-bar-item path="/category" selecColor="red">
+      <tab-bar-item path="/category" selecColor="var(--color-tint)">
         <i slot="item-icon" class="iconfont icon-fenlei"></i>
         <i slot="item-icon-select" class="iconfont icon-fenlei-select"></i>
         <div slot="item-text">
           分类
         </div>
       </tab-bar-item>
-      <tab-bar-item path="/cart" selecColor="red">
+      <tab-bar-item path="/cart" selecColor="var(--color-tint)">
         <i slot="item-icon" class="iconfont icon-gouwuche"></i>
         <i slot="item-icon-select" class="iconfont icon-gouwuche-select"></i>
         <div slot="item-text">
           购物车
         </div>
       </tab-bar-item>
-      <tab-bar-item path="/profile" selecColor="red">
+      <tab-bar-item path="/profile" selecColor="var(--color-tint)">
         <i slot="item-icon" class="iconfont icon-wode"></i>
         <i slot="item-icon-select" class="iconfont icon-wode-select"></i>
         <div slot="item-text">

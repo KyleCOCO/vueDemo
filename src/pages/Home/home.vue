@@ -1,25 +1,35 @@
 <template>
-  <div class="contain">
-    <div class="item" v-for="item in dataList" :key="item">
-      {{item}}
-    </div>
+  <div id="home">
+    <nav-bar class="home-nav">
+      <div slot="center">
+        购物街
+      </div>
+    </nav-bar>
   </div>
 </template>
 
 <script>
-
+import NavBar from '@/components/navbar/NavBar'
 export default {
   name: 'home',
-  components: {},
+  components: {
+    NavBar
+  },
   data() {
     return {
-      dataList: ['1', '2', '3', '4']
+      
     };
   },
   computed: {},
   watch: {},
   methods: {},
-  created() {},
+  created() {
+    this.$axios({
+      url: '/home/multidata'
+    }).then(res => {
+      console.log(res);
+    })
+  },
   mounted() {},
   beforeCreate() {},
   beforeMount() {},
@@ -31,15 +41,8 @@ export default {
 }
 </script>
 <style scoped>
-  .contain {
-    display: flex;
-    flex-direction: row;
-  }
-  .item {
-    flex: 1;
-    text-align: center;
-    background: red;
-    padding: 5px;
-    margin: 5px;
+  .home-nav {
+    background-color: var(--color-tint);
+    color: #fff;
   }
 </style>
